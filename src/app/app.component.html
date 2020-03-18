@@ -1,0 +1,16 @@
+<h2>{{title}}</h2>
+  <div class="container">
+    <div class="row">
+         <ol>
+            <li *ngFor="let hero of herolist">
+                <img [src]="hero.img" width="70"/> &nbsp;
+                {{hero.name}} -
+                <span *ngIf="hero.gender==1">Nam</span>
+                <span *ngIf="hero.gender==2">Nữ</span>
+                <span *ngIf="hero.gender==3">Chưa xác định</span>&nbsp;            
+                <button (click)="edit(hero)"  class="btn btn-sm btn-danger">Edit</button>&nbsp;     
+                <button (click)="remoHero(hero)" class="btn btn-sm btn-danger ">Xóa</button>
+            </li>
+        </ol>
+    </div>
+</div>
